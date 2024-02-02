@@ -6,7 +6,7 @@ module.exports = {
       debug: false,
       debugIORedis: false,
     },
-    connections: {
+    connections: {   
       default: {
         connection: {
           host: '127.0.0.1',
@@ -14,6 +14,14 @@ module.exports = {
           db: 0,
         },
       },
+      optional: {
+        connection: {
+          socket:{
+            socketPath: '/var/run/redis/redis.sock'
+          },
+          db: 0,
+        },
+      }
     },
   },
   validator() {},
